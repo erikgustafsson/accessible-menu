@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Accessible Menu test</title>
+    <meta name="MobileOptimized" content="width" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="sass/accessible-menu.css" media="all" />
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/functions.js"></script>
+</head>
+<body>
+<header role="banner">
+    <h1>Menu test</h1>
+
+    <button id="accessible-menu-button" aria-controls="accessible-menu" aria-labelledby="accessible-menu-button-text">
+        <span class="accessible-menu-button-symbol" aria-hidden="true">=</span>
+        <span id="accessible-menu-button-text" class="accessibly-hidden" aria-hidden="false">Open accessible menu</span>
+    </button>
+    <nav id="accessible-menu" aria-labelledby="accessible-menu-heading" role="navigation" class="accessibly-hidden">
+        <h2 id="accessible-menu-heading" class="accessibly-hidden">Menu 1</h2>
+        <ul>
+            <li>Item 1</li>
+            <li>
+                Item 2 (with submenu) <button aria-controls="sub-menu-1">+</button>
+                <ul id="sub-menu-1">
+                    <li>Sub menu item 1</li>
+                    <li>Sub menu item 2</li>
+                </ul>
+            </li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+        </ul>
+    </nav>
+</header>
+<main role="main" class="container">
+    <h2 id="shiftfocus">This is a test</h2>
+    The menu-test is a test!
+
+</main>
+
+
+</body>
+</html>

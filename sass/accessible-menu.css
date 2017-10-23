@@ -1,0 +1,22 @@
+body .container {
+  float: left;
+  width: 100%;
+  background-color: #cccccc; }
+
+.accessibly-hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0); }
+
+.help-cursor:hover, .help-cursor:focus {
+  cursor: help; }
+
+*:focus {
+  border: 1px solid #ff0000; }
+
+/*# sourceMappingURL=accessible-menu.css.map */
