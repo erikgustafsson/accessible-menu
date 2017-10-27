@@ -769,11 +769,14 @@ header {
           width: 100%;
           padding: 0.8333333333rem 1.6666666667rem;
           background: #0089f0;
-          border-bottom: 1px solid #003e7d; }
+          border-bottom: 1px solid #003e7d;
+          transition: all 0.2s ease; }
           header .header-menu nav ul li:last-child {
             border-bottom-color: transparent; }
           header .header-menu nav ul li a {
             color: #fff; }
+            header .header-menu nav ul li a:hover {
+              color: #add5ff; }
 
 button {
   background: #005ab3;

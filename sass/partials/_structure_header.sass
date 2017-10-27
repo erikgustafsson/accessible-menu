@@ -6,6 +6,7 @@ header
   .header-menu
     position: relative
     background: $bg-color-menu
+
     #accessible-menu-button
       float: right
     nav
@@ -19,12 +20,13 @@ header
           padding: REM($gutter / 2) REM($gutter)
           background: $bg-color-menu-nav
           border-bottom: 1px solid $bg-color-menu-nav-border
+          transition: all .2s ease
           &:last-child
             border-bottom-color: transparent
           a
             color: #fff
-
-
+            &:hover
+              color: #add5ff
 button
   background: $bg-color-button
   color: $font-color-button
