@@ -1,0 +1,80 @@
+.container
+  margin-left: auto
+  margin-right: auto
+  width: 100%
+  max-width: REM($container-width + $gutter)
+  float: none !important /* !important since this element should never be floated */
+  padding: 0 REM($gutter / 2)
+  &.hero
+    max-width: 100%
+main
+  overflow: hidden
+.row
+  float: left
+  width: 100%
+  margin-bottom: REM($gutter)
+  +media-query($maxwidth: $tablet-large)
+    margin-bottom: REM($gutter-tablet-large)
+  +media-query($maxwidth: $tablet-medium)
+    margin-bottom: REM($gutter-tablet-medium)
+  +media-query($maxwidth: $tablet-small)
+    margin-bottom: REM($gutter-tablet-small)
+  +media-query($maxwidth: $mobile-large)
+    margin-bottom: REM($gutter-mobile-large)
+  +media-query($maxwidth: $mobile-medium)
+    margin-bottom: REM($gutter-mobile-medium)
+  +media-query($maxwidth: $mobile-small)
+    margin-bottom: REM($gutter-mobile-small)
+  &:last-of-type
+    margin-bottom: 0
+.col
+  float: left
+  clear: none
+  margin-left: REM($gutter / 2)
+  margin-right: REM($gutter / 2)
+  +media-query($maxwidth: $tablet-large)
+    margin-left: REM($gutter-tablet-large / 2)
+    margin-right: REM($gutter-tablet-large / 2)
+  +media-query($maxwidth: $tablet-medium)
+    margin-left: REM($gutter-tablet-medium / 2)
+    margin-right: REM($gutter-tablet-medium / 2)
+  +media-query($maxwidth: $tablet-small)
+    margin-left: REM($gutter-tablet-small / 2)
+    margin-right: REM($gutter-tablet-small / 2)
+  +media-query($maxwidth: $mobile-large)
+    margin-left: REM($gutter-mobile-large / 2)
+    margin-right: REM($gutter-mobile-large / 2)
+  +media-query($maxwidth: $mobile-medium)
+    margin-left: REM($gutter-mobile-medium / 2)
+    margin-right: REM($gutter-mobile-medium / 2)
+  +media-query($maxwidth: $mobile-small)
+    margin-left: REM($gutter-mobile-small / 2)
+    margin-right: REM($gutter-mobile-small / 2)
+  & > .col
+    &.span100
+      width: 100% /** Nested column should be 100% **/
+  &:last-child
+    float: right
+    &.last
+      float: left /* You can define last to float left */
+  &:only-child
+    float: left
+  &.nomargin
+    margin: 0
+  &.hero
+    margin-left: 0
+    margin-right: 0
+    width: 100%
+  .inner
+    width: 100%
+    height: auto
+.hero
+  float: left
+  width: 100%
+  img
+    float: left
+p
+  margin-top: 0
+  margin-bottom: REM($gutter / 2)
+  &:last-child
+    margin-bottom: 0

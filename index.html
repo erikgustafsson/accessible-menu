@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Accessible Menu test</title>
+    <title>Accessible Menu</title>
     <meta name="MobileOptimized" content="width" />
     <meta name="HandheldFriendly" content="true" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,36 +10,47 @@
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/functions.js"></script>
 </head>
-<body>
-<header role="banner">
-    <h1>Menu test</h1>
+    <body>
+        <header role="banner" class="hero">
+            <div class="container">
+                <div class="row header-text">
+                    <h1>Accessible menu</h1>
+                    <p>This menu will provide the classes and ARIA-attributes needed!</p>
+                </div>
+            </div>
 
-    <button id="accessible-menu-button" aria-controls="accessible-menu" aria-labelledby="accessible-menu-button-text">
-        <span class="accessible-menu-button-symbol" aria-hidden="true">=</span>
-        <span id="accessible-menu-button-text" class="accessibly-hidden" aria-hidden="false">Open accessible menu</span>
-    </button>
-    <nav id="accessible-menu" aria-labelledby="accessible-menu-heading" role="navigation" class="accessibly-hidden">
-        <h2 id="accessible-menu-heading" class="accessibly-hidden">Menu 1</h2>
-        <ul>
-            <li>Item 1</li>
-            <li>
-                Item 2 (with submenu) <button aria-controls="sub-menu-1">+</button>
-                <ul id="sub-menu-1">
-                    <li>Sub menu item 1</li>
-                    <li>Sub menu item 2</li>
-                </ul>
-            </li>
-            <li>Item 3</li>
-            <li>Item 4</li>
-        </ul>
-    </nav>
-</header>
-<main role="main" class="container">
-    <h2 id="shiftfocus">This is a test</h2>
-    The menu-test is a test!
+            <div class="row header-menu">
+                <div class="container">
+                    <button id="accessible-menu-button" aria-controls="accessible-menu" aria-labelledby="accessible-menu-button-text">
+                        <span class="accessible-menu-button-symbol" aria-hidden="true">=</span>
+                        <span id="accessible-menu-button-text" class="accessibly-hidden" aria-hidden="false">Open accessible menu</span>
+                    </button>
+                    <nav id="accessible-menu" aria-labelledby="accessible-menu-heading" role="navigation" class="accessibly-hidden">
+                        <h2 id="accessible-menu-heading" class="accessibly-hidden">Menu 1</h2>
+                        <ul>
+                            <li><a href="#">Item 1</a></li>
+                            <li>
+                                <a href="#">Item 2 (with submenu)</a> <button aria-controls="sub-menu-1" class="sub-menu-button">+</button>
+                                <ul id="sub-menu-1">
+                                    <li><a href="#">Sub menu item 1</a></li>
+                                    <li><a href="#">Sub menu item 2</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Item 3</a></li>
+                            <li><a href="#">Item 4</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
 
-</main>
-
-
-</body>
+        <main role="main" class="hero">
+            <div class="container">
+                <div class="row line">
+                    <h2 id="shiftfocus">This is a test</h2>
+                    The menu-test is a test!
+                </div>
+            </div>
+        </main>
+    </body>
 </html>

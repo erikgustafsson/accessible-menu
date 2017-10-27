@@ -1,0 +1,35 @@
+header
+  position: relative
+  background: $bg-color-header
+  .header-text
+    float: left
+  .header-menu
+    position: relative
+    background: $bg-color-menu
+    #accessible-menu-button
+      float: right
+    nav
+      color: $font-color-menu
+      font-weight: 600
+      ul
+        list-style: none
+        li
+          float: left
+          width: 100%
+          padding: REM($gutter / 2) REM($gutter)
+          background: $bg-color-menu-nav
+          border-bottom: 1px solid $bg-color-menu-nav-border
+          &:last-child
+            border-bottom-color: transparent
+          a
+            color: #fff
+
+
+button
+  background: $bg-color-button
+  color: $font-color-button
+  border: $bg-color-menu-border
+  padding: REM($gutter / 4) REM($gutter / 2)
+  font-size: REM($font-size-button)
+  &.sub-menu-button
+    float: right
