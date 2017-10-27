@@ -22,6 +22,7 @@ $(document).ready(function(){
             $menu.attr('aria-expanded', 'false');
             $menu.find('ul').first().addClass('accessibly-hidden').attr('aria-expanded', 'false');
             $menuText.html('Open accessibility menu');
+            $(this).html('=');
         }
         else {
             $(this).addClass('toggled');
@@ -29,6 +30,7 @@ $(document).ready(function(){
             $menu.attr('aria-expanded', 'true');
             $menu.find('ul').first().removeClass('accessibly-hidden').attr('aria-expanded', 'true');
             $menuText.html('Close accessibility menu');
+            $(this).html('X');
         }
         setTabIndex();
     };
@@ -38,11 +40,14 @@ $(document).ready(function(){
             $(this).removeClass('toggled');
             $(this).next('.sub-menu').addClass('accessibly-hidden');
             $(this).next('.sub-menu').attr('aria-expanded', 'false');
+            $(this).html('+');
         }
         else {
             $(this).addClass('toggled');
             $(this).next('.sub-menu').removeClass('accessibly-hidden');
             $(this).next('.sub-menu').attr('aria-expanded', 'true');
+            $(this).html('-');
+
         }
         setTabIndex();
     };
