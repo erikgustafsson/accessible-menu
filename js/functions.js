@@ -30,7 +30,7 @@ $(document).ready(function(){
             $menu.find('ul').first().removeClass('accessibly-hidden').attr('aria-expanded', 'true');
             $menuText.html('Close accessibility menu');
         }
-        //setTabIndex();
+        setTabIndex();
     };
 
     function subMenuToggle() {
@@ -44,19 +44,26 @@ $(document).ready(function(){
             $(this).next('.sub-menu').removeClass('accessibly-hidden');
             $(this).next('.sub-menu').attr('aria-expanded', 'true');
         }
-        //setTabIndex();
+        setTabIndex();
     };
 
     function setTabIndex() {
         $menu.find('ul').each(function() {
-            if ($(this).attr('aria-expanded', 'false')) {
+            if ($(this).attr('aria-expanded') == 'false') {
                 $(this).find('li').each(function () {
                     $(this).attr('tabindex', '-1');
                 });
             }
+
+           else if ($(this).attr('aria-expanded') == 'true') {
+                $(this).find('li').each(function () {
+                    $(this).attr('tabindex', '0');
+                });
+            }
+
             else {
                 $(this).find('li').each(function () {
-                    $(this).attr('tabindex', '-11');
+                    $(this).attr('tabindex', 'unset');
                 });
             }
         });
